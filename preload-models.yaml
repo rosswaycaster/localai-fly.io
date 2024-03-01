@@ -1,21 +1,30 @@
 # LocalAI preloaded modules
-- name: "gpt-3.5-turbo"
-  id: "thebloke__falcon-7b-instruct-ggml__falcon-7b-instruct.ggccv1.q4_0.bin"
-  overrides: 
-    backend: "falcon"
-    f16: true
-    mmap: true
-    gpu_layers": 1
-    batch: 512
-
-- id: "stablediffusion"
-  name: "stablediffusion"
-  overrides: 
-    f16: true
-    diffusers:
-      cuda: true
-
-- name: "whisper-1"
-  id: "danielus__ggml-whisper-models__ggml-large-v2-q5_1.bin"
-  overrides: 
-    backend: "whisper"
+- url: github:go-skynet/model-gallery/base.yaml
+  name: thebloke__dolphin-2.5-mixtral-8x7b-gguf__dolphin-2.5-mixtral-8x7b.q8_0.gguf
+  license: apache-2.0
+  urls:
+    - https://huggingface.co/TheBloke/dolphin-2.5-mixtral-8x7b-GGUF
+  tags:
+    - transformers
+    - gguf
+    - mixtral
+    - en
+    - dataset:ehartford/dolphin
+    - dataset:jondurbin/airoboros-2.2.1
+    - dataset:ehartford/dolphin-coder
+    - dataset:migtissera/Synthia-v1.3
+    - dataset:teknium/openhermes
+    - dataset:ise-uiuc/Magicoder-OSS-Instruct-75K
+    - dataset:ise-uiuc/Magicoder-Evol-Instruct-110K
+    - dataset:LDJnr/Pure-Dove
+    - base_model:ehartford/dolphin-2.5-mixtral-8x7b
+    - license:apache-2.0
+    - text-generation-inference
+    - region:us
+  overrides:
+    parameters:
+        model: dolphin-2.5-mixtral-8x7b.Q8_0.gguf
+  files:
+    - filename: dolphin-2.5-mixtral-8x7b.Q8_0.gguf
+      sha256: ""
+      uri: https://huggingface.co/TheBloke/dolphin-2.5-mixtral-8x7b-GGUF/resolve/main/dolphin-2.5-mixtral-8x7b.Q8_0.gguf
